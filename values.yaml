@@ -163,19 +163,13 @@ config:
   ## https://docs.fluentbit.io/manual/pipeline/outputs
   outputs: |
     [OUTPUT]
-        Name es
-        Match kube.*
-        Host elasticsearch-master
-        Logstash_Format On
-        Retry_Limit False
-
-    [OUTPUT]
-        Name es
-        Match host.*
-        Host elasticsearch-master
-        Logstash_Format On
-        Logstash_Prefix node
-        Retry_Limit False
+        Name splunk
+        Match *
+        Host 192.168.80.206
+        Port 8088
+        Splunk_Token 6226c12f-58ef-4d4b-bf93-0ea01938ea64
+        tls On
+        tls.verify Off
 
   ## https://docs.fluentbit.io/manual/pipeline/parsers
   customParsers: |
