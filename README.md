@@ -21,7 +21,3 @@ helm install fluent-bit fluent/fluent-bit
 ```sh
 helm show values fluent/fluent-bit
 ```
-
-```sh
-### End
-```
